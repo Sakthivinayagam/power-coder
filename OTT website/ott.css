@@ -1,0 +1,281 @@
+*{
+	margin: 0;
+}
+
+body{
+	font-family: 'Roboto', sans-serif;
+}
+
+.navbar{
+	width: 100%;
+	height: 50px;
+	background-color: black;
+}
+
+.navbarcontainer{
+	display: flex;
+	align-items: center;
+	padding: 0 50px;
+	height: 100%;
+}
+
+.logocontainer{
+	flex: 1;
+}
+.logo{
+	font-family: 'sen', sans-serif;
+	font-size: 35px;
+	color: indianred;
+}
+
+.menucontainer{
+	flex: 6;
+}
+.menu-list{
+	display: flex;
+	list-style: none;
+	color: white;
+}
+.menu-list-item{
+	margin: 30px;
+	cursor: pointer;
+}
+.menu-list-item.active{
+	font-weight: bold;
+}
+
+.profilecontainer{
+	flex: 2;
+	justify-content: flex-end;
+	display: flex;
+	align-items: center;
+	color: white;
+}
+.profile-text-container{
+	margin: 0 20px;
+}
+.profile-picture{
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.toggle{
+	width: 45px;
+	height: 23px;
+	background-color: white;
+	border-radius: 32px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: relative;
+}
+
+.toggle-ball{
+	width: 20px;
+	height: 20px;
+	background-color: black;
+	border-radius: 50%;
+	right: 1px;
+	position: absolute;
+	cursor: pointer;
+	transition: 1s ease;
+}
+
+.toggle-icon{
+	color: indianred;
+}
+
+.left-menu-icon{
+	color: white;
+	font-size: 20px;
+	margin-bottom: 42px;
+}
+
+.sidebar{
+	width: 50px;
+	height: 100%;
+	background-color: black;
+	position: fixed;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 60px;
+	cursor: pointer;
+}
+
+.container{
+	background-color:  #151515 ;
+	min-height: calc(100vh - 50px);
+	color: white;
+}
+
+.content-container{
+	margin-left: 50px;
+}
+
+.featured-content{
+	height: 60vh;
+	background-color: red;
+	padding: 50px;
+}
+
+.featured-title{
+	width: 300px;
+}
+
+.featured-description{
+	width: 500px;
+	color: lightgray;
+	margin: 50px 0px;
+}
+
+.featured-button{
+	background-color: palegoldenrod;
+	color: white;
+	padding: 10px 20px;
+	border-radius: 10px;
+	border: none;
+	outline: none;
+	font-weight: bold;
+	cursor: pointer;
+}
+.featured-button:hover{
+	background-color: yellow;
+}
+
+.movie-list-wrapper{
+	position: relative;
+	overflow: hidden;
+}
+
+.movie-list{
+	display: flex;
+	height: 300px;
+	align-items: center;
+	transform: translateX(0);
+	transition: 1s all ease-in-out;
+}
+
+.movie-list-item{
+	margin-right: 30px;
+	position: relative;
+}
+
+.movie-list-item:hover .movie-list-item-image{
+	transform: scale(1.2);
+	margin: 0 30px;
+	opacity: 0.6;
+}
+.movie-list-item:hover .movie-list-item-title,
+.movie-list-item:hover .movie-list-item-description,
+.movie-list-item:hover .movie-list-item-button{
+	opacity: 1;
+}
+
+.movie-list-container{
+	padding: 15px;
+}
+
+.movie-list-item-image{
+	width: 270px;
+	height: 200px;
+	object-fit: cover;
+	transition: all 1s ease-in-out;
+	border-radius: 20px;
+}
+
+.movie-list-item-title{
+	background-color: #333;
+	padding: 0 10px;
+	font-size: 32px;
+	font-weight: bold;
+	position: absolute;
+	top: 2%;
+	right: 60px;
+	opacity: 0;
+	transition: 1s all ease-in-out;
+}
+
+.movie-list-item-description{
+	padding: 0 10px;
+	font-size: 14px;
+	position: absolute;
+	top: 20%;
+	left: 60px;
+	background-color: #333;
+	opacity: 0;
+	transition: 1s all ease-in-out;
+}
+
+.movie-list-item-button{
+	padding: 10px;
+	background-color: #4dbf00;
+	color: white;
+	border-radius: 10px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	position: absolute;
+	transition: 1s all ease-in-out;
+	bottom: 10px;
+	left: 60px;
+	opacity: 0;
+}
+
+.arrow{
+	font-size: 120px;
+	position: absolute;
+	top: 80px;
+	color: lightgray;
+	opacity: 0.6;
+	cursor: pointer;
+	right: 0;
+}
+
+.container.active{
+	background-color: white;
+}
+
+.movie-list-title.active{
+	color: black;
+}
+
+.navbarcontainer.active{
+	color: black;
+	background-color: white;
+
+}
+.menu-list.active{
+	color: black;
+}
+
+.sidebar.active{
+	background-color: white;
+}
+
+.left-menu-icon.active{
+	color: black;
+}
+
+.toggle.active{
+	background-color: black;
+}
+
+.toggle-ball.active{
+	background-color: white;
+	transform: translateX(-23px);
+}
+
+p{
+	color: red;
+}
+
+@media only screen and (max-width: 948px){
+	.menucontainer{
+		display: none;
+	}
+}
+
